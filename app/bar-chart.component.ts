@@ -1,9 +1,32 @@
+/**
+ * bar-chart.component.ts
+ * ======================
+ *
+ * To use this component, please include the following on the application's HTML:
+ *
+ * <script src="node_modules/d3/d3.js"></script>
+ * <link rel="stylesheet" href="node_modules/nvd3/build/nv.d3.css"/>
+ * <script src="node_modules/nvd3/build/nv.d3.js"></script>
+ *
+ * For future evolutions, the architecture may be enhanced by loading these dependencies
+ * in this class.
+ *
+ * - for the CSS, loading it through @Component.styleUrls, for some reason, doesn't work
+ * - for the JavaScripts, import 'module.js' doesn't work as well
+ *
+ */
+
+// for some reason, these do not work
+// import 'node_modules/d3/d3.js';
+// import 'node_modules/nvd3/build/nv.d3.js';
+
 import {Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
 import {nvD3} from 'ng2-nvd3';
 declare let d3: any;
 
 @Component({
     selector: 'nvd3-bar-chart',
+    /* styleUrls: ['node_modules/nvd3/build/nv.d3.css'], // this seems not to work... but why?? */
     directives: [nvD3],
     template: `
     <div>
