@@ -5,13 +5,13 @@ import { Hero }        from './hero';
 import { HeroService } from './hero.service';
 import { HeroSearchComponent } from './hero-search.component';
 
-import { BarChart } from './bar-chart.component';
+import { Ng2NvD3Charts } from './charts.component';
 
 @Component({
   selector: 'my-dashboard',
   templateUrl: 'app/dashboard.component.html',
   styleUrls: ['app/dashboard.component.css'],
-  directives: [HeroSearchComponent, BarChart]
+  directives: [HeroSearchComponent, Ng2NvD3Charts]
 })
 export class DashboardComponent implements OnInit {
 
